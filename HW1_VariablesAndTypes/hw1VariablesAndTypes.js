@@ -24,7 +24,7 @@ console.log('even sum ', evenSum);
 const change = 500 - sum;
 console.log('change ', change);
 
-const averagePrice = (sum / 3).toFixed(1);
+const averagePrice = (sum / 3).toFixed(2);
 console.log('averagePrice ', averagePrice);
 
 const discount = Math.floor((80 - 10) * Math.random() + 10) / 100; //possible discount from 10 to 80 %
