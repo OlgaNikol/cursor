@@ -11,13 +11,14 @@ while(!Number.isInteger(m) || m < n) {
     m = Number(prompt('Введіть ціле число і більше за попереднє', '0'));
 }
 
-let skipEven = confirm('Пропускати парні числа?');
+const skipEven = confirm('Пропускати парні числа?');
 
 let result = 0;
 
 if (skipEven) {
+    let k;
     if (n % 2 === 0) k = n + 1;
-    for (let i = k; i <= m ; i = i + 2) {
+    for (let i = k || n; i <= m ; i = i + 2) {
         result += i;
     }
 } else {
