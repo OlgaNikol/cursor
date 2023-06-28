@@ -22,25 +22,38 @@ console.log(`Функція 1 - getRandomArray - повертає масив в�
 
 /*2. Створіть функцію getModa(...numbers) – яка вираховує моду всіх переданих
 в неї аргументів. НЕ ЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ
-Приклад: getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) –> 2*/
+Приклад: getModa(6, 2, 55, 11, 11, 2, 55, 77, 57, 55, 55, 87, 23, 2, 56, 3, 2) –> 2*/
 
 const getModa = (...numbers) => {
-    let moda = 0;
-    let count = 0;
+    let moda = [];
+    let arrPastedItems = [];
+    let maxLength = 0;
+    let arr = [];
 
     numbers = numbers.filter(Number.isInteger);
 
     for (let i = 0; i < numbers.length; i++) {
-        let length = numbers.filter(item => item === numbers[i]).length;
-        if (length > count) {
-            count = length;
-            moda = numbers[i];
+        if (arrPastedItems.filter(item => item.number === numbers[i]).length === 0) {
+            let length = numbers.filter(item => item === numbers[i]).length;
+            arrPastedItems.push({
+                number: numbers[i],
+                length: length
+            })
         }
     }
+
+    arrPastedItems.forEach(item => {
+        arr.push(item.length);
+    })
+    maxLength = Math.max(...arr);
+
+    arrPastedItems = arrPastedItems.filter(item => item.length === maxLength);
+    arrPastedItems.forEach(item => moda.push(item.number));
+
     return moda;
 }
 
-const numbers = [6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2]
+const numbers = [6, 2, 55, 11, 78, 2, 55, 55, 77, 57, 87, 23, 2, 56, 3]
 console.log(`Функція 2 - getModa - вираховує моду всіх переданих в неї аргументів\n ${numbers}\n результат - `, getModa(...numbers));
 
 /* 3. Створіть функцію getAverage(...numbers) – яка рахує середнє арифметичне
