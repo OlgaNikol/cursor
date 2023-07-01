@@ -28,27 +28,29 @@ const getModa = (...numbers) => {
     let moda = [];
     let arrPastedItems = [];
     let maxLength = 0;
-    let arr = [];
 
     numbers = numbers.filter(Number.isInteger);
 
-    for (let i = 0; i < numbers.length; i++) {
-        if (arrPastedItems.filter(item => item.number === numbers[i]).length === 0) {
-            let length = numbers.filter(item => item === numbers[i]).length;
-            arrPastedItems.push({
-                number: numbers[i],
-                length: length
-            })
+    numbers.forEach((item, i, arr) => {
+        let count = 0;
+        let idx = arr.indexOf(item);
+        while (idx !== -1) {
+            count++;
+            idx = arr.indexOf(item, idx + 1);
         }
-    }
+        arrPastedItems.push({
+            number: item,
+            count: count
+        })
+    })
+
+    maxLength = arrPastedItems.reduce((previous, current) => {
+        return (previous < current.count ? current.count : previous);
+    }, 0)
 
     arrPastedItems.forEach(item => {
-        arr.push(item.length);
+        if (item.count === maxLength && moda.indexOf(item.number) === -1) moda.push(item.number);
     })
-    maxLength = Math.max(...arr);
-
-    arrPastedItems = arrPastedItems.filter(item => item.length === maxLength);
-    arrPastedItems.forEach(item => moda.push(item.number));
 
     return moda;
 }
