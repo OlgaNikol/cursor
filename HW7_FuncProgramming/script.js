@@ -51,17 +51,17 @@ console.log(`\n сумма податків у середньому в Литв�
 
 function getMySalary(country) {
     switch (country) {
-        case 'ukraine':
+        case 'Ukraine':
             country = ukraine;
         break;
-        case 'latvia':
+        case 'Latvia':
             country = latvia;
             break;
-        case 'litva':
+        case 'Litva':
             country = litva;
             break;
         default:
-            console.log('\n\nВи не вірно ввели назву країни');
+            console.log('\nВи не вірно ввели назву країни');
             return;
     }
 
@@ -81,6 +81,6 @@ function getRandomSalary() {
     return Math.floor(Math.random() * (2000 - 1500) + 1500);
 }
 
-let country = prompt('Введіть країну з обраних: ukraine, latvia, litva');
+let country = prompt('Введіть країну з обраних: Ukraine, Latvia, Litva');
+console.log(`\nФункція 4 - getMySalary\n\nпо країні ${country}`);
 getMySalary(country);
-console.log(`Функція 4 - getMySalary\n\nпо країні ${country}`);
