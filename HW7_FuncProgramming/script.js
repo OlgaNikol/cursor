@@ -65,7 +65,7 @@ function getMySalary(country) {
             return;
     }
 
-    setInterval(function() {
+    setInterval(() => {
         const salary = getRandomSalary();
         const taxes = getMyTaxes.call(country, salary);
 
