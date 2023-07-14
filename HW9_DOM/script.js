@@ -1,24 +1,22 @@
 
 const generateBlocks = () => {
-    const collection = document.getElementsByClassName('wrapper');
-    Array.from(collection).forEach(item => item.remove());
-
     const wrapper = document.createElement('div');
     wrapper.classList.add('wrapper');
     document.body.appendChild(wrapper);
 
-    const square = document.createElement('div');
-    square.classList.add('square');
-
     for (let i = 0; i < 25; i++) {
-        let newElement = square.cloneNode(true);
-        newElement.style.backgroundColor = getRandomColor();
-        wrapper.insertAdjacentElement('beforeend', newElement);
+        const square = document.createElement('div');
+        square.classList.add('square');
+        square.style.backgroundColor = getRandomColor();
+        wrapper.insertAdjacentElement('beforeend', square);
     }
 }
 
 const generateBlocksInterval = () => {
-    setInterval(generateBlocks, 2000);
+    generateBlocks();
+    const squares = document.querySelectorAll('div.square');
+    setInterval(() => squares.forEach(item => item.style.backgroundColor = getRandomColor()),
+        2000);
 }
 
 generateBlocksInterval();

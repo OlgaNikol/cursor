@@ -14,7 +14,7 @@ class Student {
     set mark(val) {
         if (this.dismissed) return;
 
-        if (val > 0 && !this.dismissed) this.marks.push(val);
+        if (val > 0) this.marks.push(val);
     }
 
     get getMarks() {

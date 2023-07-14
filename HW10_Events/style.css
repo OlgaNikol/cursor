@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("https://s.fotorama.io/1.jpg") center center/cover no-repeat;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0 auto;
+    width: 65%;
+}
+
+.wrapper .button {
+    border: 6px solid black;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: #20B2AA;
+    font-family: sans-serif;
+    font-size: 62px;
+    font-weight: 600;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.wrapper .button.active {
+    background: rgba(0,0,0,0.4);
+    border-color: #00fffa;
+    box-shadow: 0 0 1rem #00fffa;
+}
