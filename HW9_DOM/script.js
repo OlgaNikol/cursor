@@ -16,7 +16,7 @@ const generateBlocksInterval = () => {
     generateBlocks();
     const squares = document.querySelectorAll('div.square');
     setInterval(() => squares.forEach(item => item.style.backgroundColor = getRandomColor()),
-        2000);
+        1000);
 }
 
 generateBlocksInterval();
