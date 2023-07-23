@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HW12</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:ital,wght@0,300;0,400;0,700;1,100&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/9640b710f0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+	<h1>The Star Wars</h1>
+	<div class="controls">
+		<input class="controls__item" id="filmId" type="number" min="1" max="6" placeholder="enter film number"/>
+		<button class="controls__item" id="getCharsBtn">get characters</button>
+		<button class="controls__item" id="getPlanetsBtn">get planets</button>
+		<button class="controls__item" id="next" disabled>next planets</button>
+		<i id="lng" class="fa-solid fa-language fa-beat fa-2xl"></i>
+		<!--<button id="lng"><i class="fa-solid fa-language fa-beat fa-2xl"></i></button>-->
+	</div>
+	<ul class="char__list"></ul>
+</div>
+</body>
+<script src="script.js"></script>
+</html>

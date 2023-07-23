@@ -1,0 +1,103 @@
+* {
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+}
+
+body {
+    background-color: #29315e;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 100px;
+    font-family: 'Bungee Spice', cursive, sans-serif;
+}
+
+.controls {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+    position: relative;
+}
+
+.controls__item {
+    padding: 10px;
+    /* transition: none; */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 13px;
+    font-weight: 700;
+    width: 170px;
+    background-color: brown;
+}
+
+button.controls__item {
+    cursor: pointer;
+}
+
+#lng {
+    background-color: #29315e;
+    position: absolute;
+    right: -112px;
+    top: -30px;
+}
+
+.char__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.char__item {
+    width: 200px;
+    min-height: 28px;
+    background-color: #232222;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    /*transition: 0.3s transform;*/
+    list-style-type: none;
+}
+
+.char__info {
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.char__info .name {
+    display: block;
+    /*margin: 0 auto;*/
+    font-family: 'Bungee Spice', cursive, sans-serif;
+    font-size: 22px;
+    text-align: center;
+    max-height: 56px;
+    overflow: hidden;
+}
+
+.char__info .label {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 100;
+    margin-right: 10px;
+}
+
+.char__info .value {
+    font-size: 14px;
+}
+
+.message {
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+}
