@@ -44,7 +44,7 @@ const getCharsInfo = event => {
                 <li class="char__item">
                     <div class="char__info">
                         <span class="name">${!wookiee ? data.name : data.whrascwo}</span><br>
-                        <span class="label">${!wookiee ? 'birth year' : 'rhahrcaoac_roworarc'}: </span><span class="value">${!wookiee ? data.birth_year : data.rhahrcaoac_roworarc}</span>
+                        <span class="label">${!wookiee ? 'birth year' : 'rhahrcaoac_roworarc'}: </span><span class="value">${!wookiee ? data.birth_year : data.rhahrcaoac_roworarc}</span><br>
                         <span class="label">${!wookiee ? 'gender' : 'rrwowhwaworc'}: </span><span class="value"><i class="fas fa-light ${!wookiee ? getGender(data.gender) : getGender(data.rrwowhwaworc)}"></i></span>
                     </div>
                 </li>`
