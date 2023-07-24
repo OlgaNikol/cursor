@@ -2,7 +2,6 @@
     font-family: "Roboto Condensed", sans-serif;
     margin: 0;
     padding: 0;
-    /*box-sizing: border-box;*/
 }
 
 body {
@@ -10,6 +9,7 @@ body {
 }
 
 .container {
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -26,12 +26,10 @@ h1 {
     display: flex;
     justify-content: space-between;
     margin: 40px;
-    position: relative;
 }
 
 .controls__item {
     padding: 10px;
-    /* transition: none; */
     text-align: center;
     text-transform: uppercase;
     font-size: 14px;
@@ -47,19 +45,18 @@ button.controls__item {
 
 #lng {
     background-color: #29315e;
-    position: absolute;
-    right: -112px;
-    top: -30px;
+    margin-top: 16px;
+    cursor: pointer;
 }
 
 .char__list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
 .char__item {
-    width: 200px;
+    min-width: 200px;
     min-height: 28px;
     background-color: #232222;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
