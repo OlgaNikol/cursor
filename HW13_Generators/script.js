@@ -52,3 +52,14 @@ console.log(fontGenerator.next("down").value);
 console.log(fontGenerator.next("down").value);
 console.log(fontGenerator.next("down").value);
 console.log(fontGenerator.next().value);
+
+const text = document.getElementById('text');
+
+const interval = setInterval(() => text.style.fontSize = `${fontGenerator.next("up").value}px`, 2000);
+setTimeout(() => clearInterval(interval), 14000);
+
+let interval2;
+setTimeout(() => {
+    interval2 = setInterval(() => text.style.fontSize = `${fontGenerator.next("down").value}px`, 2000)
+}, 20000);
+setTimeout(() => clearInterval(interval2), 26000);
