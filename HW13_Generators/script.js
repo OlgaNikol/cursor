@@ -61,5 +61,5 @@ setTimeout(() => clearInterval(interval), 14000);
 let interval2;
 setTimeout(() => {
     interval2 = setInterval(() => text.style.fontSize = `${fontGenerator.next("down").value}px`, 2000)
-}, 20000);
+}, 15000);
 setTimeout(() => clearInterval(interval2), 26000);
